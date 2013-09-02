@@ -14,7 +14,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-   "/images/default_logo.jpg"
+    '/images/default_logo.jpg'
   end
 
   def extension_white_list

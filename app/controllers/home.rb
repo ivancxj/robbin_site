@@ -37,7 +37,7 @@ RobbinSite.controllers do
     @account = Account.new(params[:account])
     if login_account = Account.authenticate(@account.email, @account.password)
       session[:account_id] = login_account.id
-      response.set_cookie('user', {:value => login_account.encrypt_cookie_value, :path => "/", :expires => 2.weeks.since, :httponly => true}) if params[:remember_me]
+      response.set_cookie('user', {:value => login_account.encrypt_cookie_value, :path => '/', :expires => 2.weeks.since, :httponly => true}) if params[:remember_me]
       flash[:notice] = '成功登录'
       redirect url(:index)
     else
@@ -50,8 +50,8 @@ RobbinSite.controllers do
   delete :logout, :map => '/logout' do
     if account_login?
       session[:account_id] = nil
-      response.delete_cookie("user")
-      flash[:notice] = "成功退出"
+      response.delete_cookie('user')
+      flash[:notice] = '成功退出'
     end
     redirect url(:index)
   end
@@ -63,7 +63,7 @@ RobbinSite.controllers do
   end
 
   get :weibo_callback do
-    halt 401, "没有微博验证码" unless params[:code]
+    halt 401, '没有微博验证码' unless params[:code]
     auth = WeiboAuth.new
     begin
       auth.callback(params[:code])
@@ -88,7 +88,7 @@ RobbinSite.controllers do
     rescue => e
       STDERR.puts e
       STDERR.puts e.backtrace.join("\n")
-      halt 401, "授权失败，请重试几次"
+      halt 401, '授权失败，请重试几次'
     end
   end
 end

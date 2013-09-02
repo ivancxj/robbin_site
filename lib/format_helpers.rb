@@ -23,9 +23,9 @@ module Padrino
 
         when 2..44        then "#{distance_in_minutes} 分钟前"
         when 45..1439     then "#{(distance_in_minutes.to_f / 60).round} 小时前"
-        when 1440..2879   then "昨天"
-        when 2880..4319   then "前天"
-        else from_time.strftime(include_seconds ? "%Y-%m-%d %H:%M" : "%Y-%m-%d")
+        when 1440..2879   then '昨天'
+        when 2880..4319   then '前天'
+        else from_time.strftime(include_seconds ? '%Y-%m-%d %H:%M' : '%Y-%m-%d')
         end
       end
     end
