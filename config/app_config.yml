@@ -1,11 +1,11 @@
 development: &default
   session_secret: '1234567890'
   site_url: 'http://localhost:3000'
-  site_title: 'ivancxj的自言自语'
+  site_title: 'ivancxj的个人博客'
   site_motto: '好好学习,天天向上.'
   site_description: 'ivancxj个人网站，发表个人原创的博客文章和学习笔记'
   show_certification: true
-  show_me_url: 'http://42.121.128.109/blog/1/about-cxj'
+  show_me_url: 'http://42.121.128.109/blog/1/about-ivancxj'
   blog_search_ping: false
   google_cse: '007540752216561218107:cgbwg20yn_o'
   weibo_api_key: '1234567890'
