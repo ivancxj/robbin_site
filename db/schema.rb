@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(:version => 16) do
   add_index "blog_comments", ["blog_id"], :name => "index_blog_comments_on_blog_id"
 
   create_table "blog_contents", :force => true do |t|
-    t.text "content", :limit => 16777215, :null => false
+    t.text "content", :limit => 65537, :null => false
   end
 
   create_table "blogs", :force => true do |t|
