@@ -5,7 +5,7 @@ development: &default
   site_motto: '好好学习,天天向上.'
   site_description: 'cxj个人网站，发表个人原创的博客文章和学习笔记'
   show_certification: true
-  show_me_url: 'http://robbinfan.com/blog/28/about-robbin'
+  show_me_url: 'http://42.121.128.109/blog/1'
   blog_search_ping: false
   google_cse: '007540752216561218107:cgbwg20yn_o'
   weibo_api_key: '1234567890'
