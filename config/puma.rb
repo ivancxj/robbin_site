@@ -35,7 +35,7 @@ environment 'production'
 # The default is “false”.
 #
 # daemonize
-#daemonize true
+daemonize true
 
 wd          = File.expand_path('../../', __FILE__)
 tmp_path    = File.join(wd, 'log')
