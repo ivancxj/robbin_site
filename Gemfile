@@ -25,7 +25,7 @@ gem 'rest-client'
 
 # Production requirements
 group :production do
-  gem 'zbatery'
+  #gem 'zbatery'
   # gem 'rainbows'
   gem 'puma'
 end
